@@ -1,0 +1,115 @@
+:root{
+    --navy: #171836;
+    --red: #EF2B2D;
+    --baby-blue: #3FB3E6;
+}
+
+.technology {
+    width: 100%;
+    margin-top: 20px ;
+    padding: 20px;
+    background-color: var(--navy);
+   border-top-left-radius: 10px;
+   border-top-right-radius: 10px;
+    color: #fff;
+}
+
+.tech-head {
+    text-align: end;
+    margin-right: 100px;
+}
+.boxs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+.boxs .tech-box {
+    text-align: center;
+    background-color: #fff;
+    color: black;
+    padding:  20px;
+    width: 350px;
+    height: 120px;
+    text-align: center;
+    transition: .6s;
+    cursor: pointer;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.tech-box:hover {
+    background-color: var(--red);
+    color: #fff;
+}
+.tech-box:hover .number {
+    background-color: #fff;
+    color: var(--red);
+}
+
+.tech-box .number{
+    position: absolute;
+    font-size: 35px;
+    font-weight: 600;
+    width: 60px;
+    height: 60px;
+    background-color: var(--red) ;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -10px;
+    top: -10px; 
+    transition: .6s;
+
+}
+.tech-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 50%;
+    top: 25%;
+    transform: translateY(60%);
+}
+.tech-text h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+.tech-text img {
+    width: 25px;
+    margin-top: -4px;
+    margin-right: 10px;
+}
+
+
+
+@media (min-width:767px) and (max-width:850px) {
+    .boxs {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .boxs .tech-box {
+        
+        width:47% ;
+    }
+}
+
+@media (max-width:766px) {
+    .boxs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .boxs .tech-box {
+        width: 350px;
+    }
+}
+
+@media (max-width:550px) {
+    .boxs .tech-box {
+        width: 270px;
+    }
+}

@@ -1,0 +1,173 @@
+:root {
+    --red: #EF2B2D;
+    --gray: #00000099;
+   
+    --baby-blue: #3FB3E6;
+    --font-family:'Cairo', sans-serif;
+
+}
+.who-we-are {
+    margin: 20px 0;
+    background-color: #fff;
+    
+    
+}
+
+.heading p, h4 {
+    text-align: center;
+    
+}
+.heading p{
+    font-weight: 600;
+}
+.heading .who-para {
+    
+   font-weight: 600;
+   direction: rtl;
+   text-align:right;
+  
+}
+
+.content {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.right-content,
+.left-content {
+    position: relative;
+    direction: rtl;
+    width: 300px;
+    height: 150px;
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+    transition: .6s;
+    cursor: pointer;
+ 
+}
+.right-content:hover,
+.left-content:hover{
+    background-color: var(--red);
+    color: #fff;
+}
+.right-content .number ,
+.left-content .number{
+    position: absolute;
+    font-size: 35px;
+    font-weight: 600;
+    width: 60px;
+    height: 60px;
+    background-color: var(--red) ;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -10px;
+    top: -10px; 
+    transition: .6s;
+
+}
+.right-content:hover .number,
+.left-content:hover .number{
+    color: var(--red);
+    background-color: #fff;
+}
+.content-num {
+    margin-top: 19px;
+    margin-right: 46px;
+    font-size: 26px;
+
+}
+
+.content-para {
+    margin-right: 46px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.6);
+    transition: .6s;
+  
+}
+
+.left-content:hover .content-para,
+.right-content:hover .content-para  {
+    color: #fff;
+}
+
+.middel-content {
+    display: flex;
+    position: relative;
+    
+}
+.right-arrow,
+.left-arrow {
+    width: 200px;
+    margin-top: -20px;
+    height: 100px;
+    position: absolute;
+}
+.left-arrow {
+    left: -190px;
+    top: 20px;
+}
+.right-arrow {
+    left: 179px;
+    top: 20px;
+
+}
+.phone {
+    width: 300px;
+}
+.phone img,
+.left-arrow img,
+.right-arrow img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width:991px) {
+    .phone {
+        width: 200px;
+    }
+    .content {
+        margin-top: 100px;
+    }
+    .right-arrow,
+    .left-arrow {
+        top: -30px;
+    }
+}
+@media (min-width: 651px) and (max-width:800px) {
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .phone,
+    .left-arrow,
+    .right-arrow {
+        display: none;
+    }
+}
+
+@media (max-width:650px) {
+    .phone,
+    .left-arrow,
+    .right-arrow {
+        display: none;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .right-content,
+    .left-content {
+        width: 350px;
+        height: 180px;
+    }
+
+}
+ 

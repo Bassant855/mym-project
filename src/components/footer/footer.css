@@ -1,0 +1,12 @@
+.footer {
+    height: 80px;
+    background-color: var(--navy);
+    padding: 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.footer-head {
+    color: #fff;
+    text-align: center;
+}

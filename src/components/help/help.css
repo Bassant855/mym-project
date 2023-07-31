@@ -1,0 +1,153 @@
+
+.help {
+    margin: 20px;
+    padding: 20px;
+    position: relative;
+}
+.help-head {
+    text-align: center;
+}
+.help-para {
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 22px;
+}
+.boxs {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+     direction: rtl;
+     gap: 20px;
+    
+}
+.box {
+    position: relative;
+    direction: rtl;
+    width: 300px;
+    height: 150px;
+    box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+    transition: .6s;
+    cursor: pointer;
+    background-color: #fff;
+}
+.box-icon{
+    position: absolute;
+    left: 12px;
+    top: 10px;
+    width: 17px;
+}
+.box-icon #fill-icon{
+    width: 100%;
+
+}
+.box:hover .box-icon #fill-icon {
+    fill: invert(100%) sepia(100%) saturate(0%) hue-rotate(110deg) brightness(106%) contrast(102%)
+}
+.box .number {
+    position: absolute;
+    font-size: 35px;
+    font-weight: 600;
+    width: 60px;
+    height: 60px;
+    background-color: var(--red) ;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -10px;
+    top: -10px; 
+    transition: .6s;
+}
+
+.box:hover .number{
+    color: var(--red);
+    background-color: #fff;
+}
+.box:hover{
+    background-color: var(--red);
+    color: #fff;
+}
+.box:hover .content-para {
+    color: #fff;
+}
+
+.loading-container {
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 20%;
+}
+
+.loading {
+    width: 500px;
+    height: 500px;
+    border: 2px dashed rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    margin: 50px auto;
+    animation: spin 2s linear infinite;
+    z-index: -100;
+    opacity: .3;
+}
+.chlid {
+    width: 400px;
+    height: 400px;
+    border: 2px dashed rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    margin: 50px auto;
+    animation: spin 1s linear infinite;
+   
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media (min-width:767px) and (max-width:850px) {
+    .boxs {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .boxs .box {
+        
+        width:47% ;
+    }
+}
+
+@media (max-width:766px) {
+    .boxs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .boxs .box {
+        width: 350px;
+    }
+    .loading {
+        width: 300px !important;
+        height: 300px !important;
+    }
+    .chlid {
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
+
+@media (max-width:550px) {
+    .boxs .box {
+        width: 270px;
+    }
+
+   
+}
